@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<title>Desafio GreenMille - Vehicles</title>
+</head>
+<body class="bg-light">
+	<div class="card text-center border rounded bg-dark text-white">
+		<h1 class="card-body">Desafio Green Mille</h1>
+		
+	</div>
+	<div class="text-dark"><p>.</p><p>.</p><p>.</p></div>	
+	<div class="card col w-50 mh-100 bg-secondary mx-auto">
+		<h2 class="card-header text-white">Serviços </h2>
+		<ul class="card-body text-white">
+			<li><a class="text-white" th:href="@{envCord}">Simulação de deslocamento de veículo</a></li>
+			<li><a class="text-white" href="#">Gerar conjunto de coordenadas</a></li>
+			<li><a class="text-white" href="#">Enviar coordenadas manualmente</a></li>
+		</ul>
+	</div>
+</body>
+</html>

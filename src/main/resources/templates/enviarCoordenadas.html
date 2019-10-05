@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<title>Desafio GreenMille - Vehicles</title>
+</head>
+<body class="bg-light">
+	<div class="card text-center border rounded bg-dark text-white">
+		<h1 class="card-body">Enviar Coordenadas</h1>
+	</div>
+	<div class="card">
+		<form th:action="@{/envCord}" method="post" th:object="${vehicle}">
+			<fieldset>
+				<div class=" row form-group mx-auto border rounded ">
+					<div class="col w-25">
+						<Label 
+							th:classappend="${#fields.hasErrors('id')}? 'text-danger'">Vehicle
+							Id:</Label> <input type="text" class="form-control" th:field="*{id}">
+						<Label 
+							th:classappend="${#fields.hasErrors('lat')}? 'text-danger'">Latitude:</Label>
+						<input type="text" class="form-control" th:field="*{lat}">
+						<Label 
+							th:classappend="${#fields.hasErrors('lgn')}? 'text-danger'">Longitude:</Label>
+						<input type="text" class="form-control" th:field="*{lgn}">
+						<Label 
+							th:classappend="${#fields.hasErrors('time')}? 'text-danger'">Time:</Label>
+						<input type="text" class="form-control" th:field="*{time}">
+					</div>
+					<div class=" col form-group w-25">
+					<Label>Resposta do Servidor</Label>
+						<textarea  th:text="${mensagem}"
+							class=" border rounded bg-light form-control " rows="12" cols="120"
+							readonly>Mensagem de retorno</textarea>
+					</div>
+				</div>
+			</fieldset>
+			<button type="submit">Enviar</button>
+		</form>
+
+	</div>
+
+
+
+</body>
+</html>
